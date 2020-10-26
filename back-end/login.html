@@ -1,0 +1,30 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="slogin.css">
+	
+	</head>
+	<body>
+	
+	<div class="header_login">
+	<h1>Selamat Datang Pelanggan</h1>
+	</div>
+	<form action="../back-end/proses_login.php" method="post">
+	<div class="bodi_login">
+
+	<table  align="center">
+	<tr><td><input type="text" name="username" value="" placeholder="username"></td></tr>
+	<tr><td><input type="password" name="pasword" value="" placeholder="password"></td></tr>
+	<tr>
+		<td colspan="2"><input type="submit" name="simpan" value="LOGIN"></td>
+	</tr>
+	</table>
+		<?php echo @$pesan;?><br>
+	</div>
+	</form>
+	<div class="footer_login">
+	<h1>Ingin Daftar Kembali? <a href ="../back-end/daftar.php">Daftar</a></h1>
+	</div>
+	
+	</body>
+
+</html>

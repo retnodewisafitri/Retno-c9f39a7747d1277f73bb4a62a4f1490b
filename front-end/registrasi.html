@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<form action="../back-end/daftar.php" method="post" enctype="multipart/form-data">
+        <title>Validasi</title>
+    </head>
+    <body>
+        <form action="" method="post">
+        	<input type="text" name="username" placeholder="Username" ><br>
+            <input type="password" id="pw1" placeholder="Password"/><br>
+            <input type="password" id="pw2" name="pasword" placeholder="Konfirmasi Password"/><br>
+            <input type="submit" value="Daftar">
+        </form>  
+      
+        <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById("pw1").onchange = validatePassword;
+                document.getElementById("pw2").onchange = validatePassword;
+            }
+            function validatePassword(){
+                var pass2=document.getElementById("pw2").value;
+                var pass1=document.getElementById("pw1").value;
+                if(pass1!=pass2)
+                    document.getElementById("pw2").setCustomValidity("Password Tidak Sama, Coba Lagi");
+                else
+                    document.getElementById("pw2").setCustomValidity('');
+            }
+        </script>
+        <h1>Sudah punya akun? <a href="login.html">Login!</a></h1>
+    </body>
+</html>
